@@ -32,22 +32,17 @@ service choice_fn /sbin/choice_fn
     oneshot
 
 service recovery /sbin/recovery
-    disabled
 
 service power_test /sbin/power_test
-    disabled
     oneshot
 
 service offmode_charging /sbin/offmode_charging
-    disabled
     oneshot
 
 service detect_key /sbin/detect_key
-    disabled
     oneshot
 
 service adbd /sbin/adbd recovery
-    disabled
 
 # Always start adbd on userdebug and eng builds
 on property:ro.debuggable=1
