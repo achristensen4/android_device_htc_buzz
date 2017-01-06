@@ -6,9 +6,6 @@
 # appropriately. If this property is not defined, the default value is 160 dpi.
 ro.sf.lcd_density=120
 
-# Set default screen brightness
-settings.display.brightness=102
-
 # View configuration for QVGA.
 view.fading_edge_length=8
 view.touch_slop=15
@@ -31,13 +28,13 @@ ro.ril.def.agps.mode=2
 ro.ril.gprsclass=12
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # For PDP overlap problem
-ro.ril.avoid.pdp.overlap=1
+ro.ril.avoid.pdp.overlap=0
 
 # update the acoustic table for Buzz NEL lab testing
-ro.ril.update.acoustic.table=1
+ro.ril.update.acoustic.table=0
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
@@ -46,7 +43,7 @@ ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 # This only affects the case in which there are remembered access points,
 # but none are in range.
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=45
+wifi.supplicant_scan_interval=16
 
 # Mobile data interfaces
 mobiledata.interfaces=rmnet0,rmnet1,rmnet2
@@ -68,12 +65,12 @@ ro.com.google.locationfeatures=1
 ro.opengles.version=65536
 
 # Disable fs check on boot by default.
-sys.checkfs.fat=false
+sys.checkfs.fat=true
 
 # Performance settings.
-dalvik.vm.dexopt-data-only=1
+dalvik.vm.dexopt-data-only=0
 dalvik.vm.execution-mode=int:jit
-debug.sf.hw=0
+debug.sf.hw=1
 ro.config.disable_hw_accel=true
 
 # Increase SKIA decode memory capability for progressive jpg file.
